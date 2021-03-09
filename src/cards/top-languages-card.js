@@ -127,7 +127,7 @@ const renderTopLanguages = (topLangs, options = {}) => {
     const compactProgressBar = langs
       .map((lang) => {
         const percentage = (
-          (lang.size / totalLanguageSize) *
+          ((lang.size+100) / totalLanguageSize) *
           (width - 50)
         ).toFixed(2);
 
