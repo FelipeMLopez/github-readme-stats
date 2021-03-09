@@ -135,7 +135,7 @@ async function fetchStats(
 
   stats.totalStars = user.repositories.nodes.reduce((prev, curr) => {
     return prev + curr.stargazers.totalCount;
-  }, 23);
+  }, 0);
 
   stats.rank = calculateRank({
     totalCommits: stats.totalCommits,
