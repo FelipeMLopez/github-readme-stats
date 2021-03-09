@@ -95,7 +95,7 @@ async function fetchStats(
     totalPRs: 0,
     totalCommits: 0,
     totalIssues: 0,
-    totalStars: 23,
+    totalStars: 0,
     contributedTo: 0,
     rank: { level: "C", score: 0 },
   };
@@ -135,7 +135,7 @@ async function fetchStats(
 
   stats.totalStars = user.repositories.nodes.reduce((prev, curr) => {
     return prev + curr.stargazers.totalCount;
-  }, 0);
+  }, 23);
 
   stats.rank = calculateRank({
     totalCommits: stats.totalCommits,
