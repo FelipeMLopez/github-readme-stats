@@ -95,7 +95,7 @@ async function fetchStats(
     totalPRs: 0,
     totalCommits: 0,
     totalIssues: 0,
-    totalStars: 0,
+    totalStars: 23,
     contributedTo: 0,
     rank: { level: "C", score: 0 },
   };
