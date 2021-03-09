@@ -6,7 +6,7 @@ const statCardLocales = ({ name, apostrophe }) => {
       cn: `${encodeHTML(name)} 的 GitHub 统计数据`,
       cs: `GitHub statistiky uživatele ${encodeHTML(name)}`,
       de: `${encodeHTML(name) + apostrophe} GitHub-Statistiken`,
-      en: `${encodeHTML(name)}'${apostrophe} GitHub Stats`,
+      en: `Felipe'${apostrophe} GitHub Stats`,
       es: `Estadísticas de GitHub de ${encodeHTML(name)}`,
       fr: `Statistiques GitHub de ${encodeHTML(name)}`,
       hu: `${encodeHTML(name)} GitHub statisztika`,
