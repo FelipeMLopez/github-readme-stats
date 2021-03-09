@@ -205,7 +205,7 @@ const langCardLocales = {
     cn: "最常用的语言",
     cs: "Nejpoužívanější jazyky",
     de: "Meist verwendete Sprachen",
-    en: "Felipe's most Used Languages",
+    en: "Felipe's Most Used Languages",
     es: "Lenguajes más usados",
     fr: "Langages les plus utilisés",
     hu: "Leggyakrabban használt nyelvek",
