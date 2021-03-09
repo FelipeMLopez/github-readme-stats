@@ -34,7 +34,7 @@ const renderRepoCard = (repo, options = {}) => {
     locale,
   } = options;
 
-  const header = show_owner ? nameWithOwner : name;
+  const header = show_owner ? "Felipe Muñoz" : name;
   const langName = (primaryLanguage && primaryLanguage.name) || "Unspecified";
   const langColor = (primaryLanguage && primaryLanguage.color) || "#333";
 
