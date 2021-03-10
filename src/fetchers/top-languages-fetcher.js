@@ -9,16 +9,16 @@ const fetcher = (variables, token) => {
       query userInfo($login: String!) {
         user(login: $login) {
           # fetch only owner repos & not forks
-          repositories(first: 100, ownerAffiliations: [OWNER, COLLABORATOR]) {
+          repositories(first: 100, ownerAffiliations: [OWNER, COLLABORATOR], isFork: true) {
             nodes {
               name
               languages(first: 10, orderBy: {field: SIZE, direction: DESC}) {
                 edges {
                   size
-                }
-                nodes {
-                  color
-                  name
+                  node {
+                    color
+                    name
+                  }
                 }
               }
             }
@@ -69,16 +69,16 @@ async function fetchTopLanguages(username, langsCount = 5, exclude_repo = []) {
       return node.languages.edges.length > 0;
     })
     // flatten the list of language nodes
-    .reduce((acc, curr) => curr.languages.concat(acc), [])
+    .reduce((acc, curr) => curr.languages.edges.concat(acc), [])
     .reduce((acc, prev) => {
       // get the size of the language (bytes)
-      let langSize = prev.edges.size;
+      let langSize = prev.size;
 
       // if we already have the language in the accumulator
       // & the current language name is same as previous name
       // add the size to the language size.
       if (acc[prev.node.name] && prev.node.name === acc[prev.node.name].name) {
-        langSize = prev.edges.size + acc[prev.node.name].size;
+        langSize = prev.size + acc[prev.node.name].size;
       }
       return {
         ...acc,
