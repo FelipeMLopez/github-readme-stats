@@ -18,7 +18,7 @@ const fetcher = (variables, token) => {
             totalCommitContributions
             restrictedContributionsCount
           }
-          repositoriesContributedTo(first: 100, contributionTypes: [COMMIT, ISSUE, PULL_REQUEST, REPOSITORY]) {
+          repositoriesContributedTo(first: 100, contributionTypes: [COMMIT, ISSUE, PULL_REQUEST, REPOSITORY], privacy: [PUBLIC, PRIVATE]) {
             totalCount
           }
           pullRequests(first: 1) {
