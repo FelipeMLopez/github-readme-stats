@@ -66,7 +66,7 @@ async function fetchTopLanguages(username, langsCount = 5, exclude_repo = []) {
 
   repoNodes = repoNodes
     .filter((node) => {
-      return node.languages.edges.size > 0;
+      return node.languages.edges.length > 0;
     })
     // flatten the list of language nodes
     .reduce((acc, curr) => curr.languages.edges.concat(acc), [])
