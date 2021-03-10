@@ -16,7 +16,7 @@ const fetcher = (variables, token) => {
                 edges {
                   size
                 }
-                node {
+                nodes {
                   color
                   name
                 }
