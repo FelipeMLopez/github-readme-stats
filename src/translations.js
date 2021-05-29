@@ -149,6 +149,7 @@ const statCardLocales = ({ name, apostrophe }) => {
   };
 };
 
+
 const repoCardLocales = {
   "repocard.template": {
     cn: "模板",
